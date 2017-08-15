@@ -1,0 +1,36 @@
+/* Multiplicación con sumas sucesivas */
+#include <conio.h>
+#include <stdio.h>
+
+int main()
+{
+   int acumulador,contador,n1,n2;
+   
+   printf ("\n Introduzca un numero");
+   scantf ("%d", &n1);
+   
+   printf ("\n Introduzca un numero");
+   scantf ("%d", &n2);
+   
+   if (n1>=0 && n2>=0)
+   { 
+     acumulador=0;
+     if (n2!=0)
+     {
+       contador=1;
+       while (contador <=n1)
+       {
+         acumulador += n2;
+         contador ++;
+         }
+      }
+      
+      printf ("\n %d * %d= %d",n1,n2,acumulador);
+      
+      }
+      else
+      printf ("\n ERROR: Los numeros deben ser mayores o iguales a cero");
+      
+      getch();
+      return 0;
+ }
