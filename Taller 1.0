@@ -34,3 +34,43 @@ int main()
       getch();
       return 0;
  }
+
+
+
+/* División con sumas sucesivas */
+#include <conio.h>
+#include <stdio.h>
+
+int main()
+{
+ int cociente, dividendo, divisor,resto;
+ 
+ printf ("\n Introduzca dividendo");
+ scantf ("%d", &dividendo);
+
+ printf ("\n Introduzca divisor");
+ scantf ("%d", &divisor);
+ 
+ if(dividendo>0 && divisor>0)
+ {
+     cociente=0;
+     resto=dividendo;
+  while (resto >= divisor)
+  {
+    resto-=divisor;
+    cociente ++;
+  }
+  
+  printf ("\n %d div %d=%d(Resto=%d)";
+  dividendo,divisor,cociente,resto);
+ 
+}
+  else
+  
+  printf ("\n ERROR: Los números deben ser mayores que cero)";
+  
+  getch();
+  return 0;
+  
+  }
+  
